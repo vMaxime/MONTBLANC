@@ -38,17 +38,17 @@ header {
     flex-direction: row;
 }
 
-#navigation-item {
+.navigation-item {
     padding: 0 36px;
 }
 
-#navigation-item a {
+.navigation-item a {
     color: #FFF;
     font-weight: bold;
     text-decoration: none;
 }
 
-#navigation-item a:hover {
+.navigation-item a:hover {
     color: rgb(208, 208, 208);
 }
 
