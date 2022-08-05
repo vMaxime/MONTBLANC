@@ -1,11 +1,26 @@
-* {
+@font-face {
+    font-family: "Druk Wide";
+    src: url("/fonts/Druk-Wide-Cy-Web-Medium-Regular.ttf") format("ttf");
+   }
+
+*, ul {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: auto;
 }
 
 body {
     background-color: #060507;
+    height: auto;
+    max-width: 1750px;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .container {
@@ -15,11 +30,12 @@ body {
 
 header {
     width: 100%;
-    height: 164px;
+    min-height: 100px;
     color: #FFF;
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-family: 'Druk Wide', sans-serif;
 }
 
 #brand {
@@ -45,6 +61,7 @@ header {
 .navigation-item a {
     color: #FFF;
     font-weight: bold;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -52,9 +69,185 @@ header {
     color: rgb(208, 208, 208);
 }
 
-#gold-img {
-    height: 662px;
-    width: 475px;
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.gold-img {
     position: absolute;
-    right: 0px;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    height: 225px;
+    width: 500px;
+}
+
+.content {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #060507;
+    color: #FFF;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: #060507;
+    margin-top: 150px;
+    margin-left: 40px;
+    color: #FFF;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.sidebar-item {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-item img {
+    max-width: 100%;
+    width: 250px;
+}
+
+.bike {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bike-img {
+    max-width: 100%;
+    width: 900px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.wheel-img {
+    max-width: 100%;
+    width: 250px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.motorcycle {
+    position: absolute;
+    height: 128px;
+    width: 128px;
+    left: 715px;
+    top: 15px;
+    background-image: url(images/content/MOTORCYCLE.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.vector {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    left: 0;
+    bottom: 110px;
+    background-image: url(images/content/VECTOR2.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.rotate {
+    animation: rotation 16s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.footer {
+    margin-top: 40px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar {
+    margin-left: 32px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Druk Wide', sans-serif;
+}
+
+.bar-left {
+    margin-right: 24px;
+}
+
+.bar-left::before {
+    content: "<";
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.bar-right {
+    margin-left: 24px;
+}
+
+.bar-right::after {
+    content: ">";
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.bar-progress {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bar-progress-left {
+    width: 65%;
+    height: 2px;
+    background-color: #A75B12;
+}
+
+.bar-progress-right {
+    width: 35%;
+    height: 2px;
+    background-color: #FFF;
+}
+
+.bar, .description {
+    margin-top: 64px;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 1.8;
+    width: 410px;
+}
+
+.moto-back {
+    align-self: flex-end;
+    height: 90%;
+    width: 275px;
 }
